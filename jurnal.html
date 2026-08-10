@@ -12,6 +12,22 @@
 <meta name="description"
 content="Jurnal Digital 7 Kebiasaan Anak Indonesia Hebat SDN Kalibaru 3 Depok.">
 
+
+<!-- =========================
+     GOOGLE FONT - INTER
+========================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+
 <style>
 
 /* =========================
@@ -29,10 +45,17 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
     color: #183b36;
     background: #f7faf9;
     line-height: 1.6;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -75,21 +98,24 @@ a {
     gap: 12px;
 }
 
-.brand-icon {
+.brand-logo {
     width: 45px;
     height: 45px;
 
-    background: #087f6e;
-    color: white;
-
-    border-radius: 12px;
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
-    font-size: 22px;
-    font-weight: bold;
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
 }
 
 .brand-text h1 {
@@ -127,6 +153,31 @@ a {
 .nav-menu a.active {
     background: #087f6e;
     color: white;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #e7f5f2;
+    color: #087f6e;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -227,7 +278,7 @@ a {
 
     font-size: 13px;
 
-    font-weight: bold;
+    font-weight: 700;
 
     text-transform: uppercase;
 
@@ -363,7 +414,7 @@ a {
 
     font-size: 14px;
 
-    font-weight: bold;
+    font-weight: 700;
 
     transition: 0.25s;
 }
@@ -449,6 +500,25 @@ footer {
     gap: 50px;
 }
 
+.footer-logo {
+    width: 70px;
+    height: 70px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
 .footer-brand h2 {
 
     font-size: 20px;
@@ -515,8 +585,52 @@ footer {
 
 @media (max-width: 900px) {
 
+    .menu-toggle {
+        display: flex;
+    }
+
     .nav-menu {
         display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        background: white;
+
+        padding: 12px 20px 18px;
+
+        border-bottom:
+            1px solid
+            #e5eeee;
+
+        box-shadow:
+            0 10px 25px
+            rgba(18,67,61,0.08);
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+
+        padding: 12px 14px;
+
+        border-radius: 9px;
+    }
+
+    .nav-menu a.active {
+        padding: 12px 14px;
     }
 
     .journal-grid {
@@ -595,8 +709,11 @@ footer {
 
 <a href="index.html" class="brand">
 
-<div class="brand-icon">
-K3
+<div class="brand-logo">
+<img
+src="LOGO%20KB3.png"
+alt="Logo SDN Kalibaru 3"
+>
 </div>
 
 <div class="brand-text">
@@ -614,7 +731,17 @@ Depok, Jawa Barat
 </a>
 
 
-<nav class="nav-menu">
+<button
+class="menu-toggle"
+id="menuToggle"
+aria-label="Buka menu navigasi"
+aria-expanded="false"
+>
+☰
+</button>
+
+
+<nav class="nav-menu" id="navMenu">
 
 <a href="index.html">
 Beranda
@@ -637,6 +764,7 @@ Kontak
 </a>
 
 </nav>
+
 
 </div>
 
@@ -771,8 +899,7 @@ Lihat Rekap
 
 <p>
 Pantau perkembangan pelaksanaan
-7 Kebiasaan Anak Indonesia Hebat
-melalui rekap jurnal digital.
+7 Kebiasaan Anak Indonesia Hebat.
 </p>
 
 <a
@@ -825,6 +952,15 @@ bagian penting dari pembentukan kebiasaan baik.
 
 
 <div class="footer-brand">
+
+<div class="footer-logo">
+
+<img
+src="LOGO%20KB3.png"
+alt="Logo SDN Kalibaru 3"
+>
+
+</div>
 
 <h2>
 SDN KALIBARU 3 DEPOK
@@ -883,7 +1019,8 @@ Jurnal 7 KAIH
 <a
 href="https://s.id/livejurnal7kaihkb3"
 target="_blank"
-rel="noopener noreferrer">
+rel="noopener noreferrer"
+>
 Rekap Jurnal
 </a>
 
@@ -910,6 +1047,81 @@ Seluruh hak cipta dilindungi.
 </div>
 
 </footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const navMenu =
+    document.getElementById("navMenu");
+
+
+menuToggle.addEventListener("click", function () {
+
+    const isOpen =
+        navMenu.classList.toggle("show");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+    menuToggle.textContent =
+        isOpen ? "✕" : "☰";
+
+});
+
+
+/* Tutup menu setelah memilih halaman */
+
+navMenu.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navMenu.classList.remove("show");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuToggle.textContent = "☰";
+
+    });
+
+});
+
+
+/* Tutup menu ketika klik di luar */
+
+document.addEventListener("click", function (event) {
+
+    if (
+        !navMenu.contains(event.target) &&
+        !menuToggle.contains(event.target)
+    ) {
+
+        navMenu.classList.remove("show");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuToggle.textContent = "☰";
+
+    }
+
+});
+
+</script>
 
 
 </body>
