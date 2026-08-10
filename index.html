@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDN Kalibaru 3 Depok</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0f766e;
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        nav {
+            background: #115e59;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .hero {
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ccfbf1, #f0fdfa);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #115e59;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0f766e;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #115e59;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #115e59;
+            margin-bottom: 35px;
+            font-size: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #0f766e;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #134e4a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>SDN KALIBARU 3 DEPOK</h1>
+        <p>Sekolah Dasar Negeri Kalibaru 3</p>
+    </header>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#profil">Profil</a>
+        <a href="#informasi">Informasi</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <main>
+
+        <section class="hero" id="beranda">
+            <div class="hero-content">
+                <h2>Selamat Datang di Website SDN Kalibaru 3</h2>
+                <p>
+                    Portal informasi dan layanan digital
+                    SDN Kalibaru 3 Depok.
+                </p>
+                <a href="#profil" class="button">Jelajahi Website</a>
+            </div>
+        </section>
+
+        <section id="profil">
+            <h2>Profil Sekolah</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Visi</h3>
+                    <p>
+                        Mewujudkan peserta didik yang berkarakter,
+                        berprestasi, mandiri, dan peduli lingkungan.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Misi</h3>
+                    <p>
+                        Menyelenggarakan pendidikan yang berkualitas,
+                        berkarakter, dan berorientasi pada perkembangan
+                        potensi peserta didik.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Tentang Sekolah</h3>
+                    <p>
+                        SDN Kalibaru 3 merupakan sekolah dasar negeri
+                        yang berada di Kota Depok, Jawa Barat.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="informasi">
+            <h2>Informasi Sekolah</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>📢 Pengumuman</h3>
+                    <p>
+                        Informasi terbaru mengenai kegiatan dan program
+                        sekolah akan ditampilkan di sini.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>📅 Agenda</h3>
+                    <p>
+                        Jadwal kegiatan sekolah, pembelajaran,
+                        dan kegiatan peserta didik.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🏆 Prestasi</h3>
+                    <p>
+                        Dokumentasi prestasi peserta didik
+                        dan sekolah.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="layanan">
+            <h2>Layanan Digital</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>📚 Pembelajaran</h3>
+                    <p>
+                        Akses berbagai sumber dan layanan
+                        pembelajaran digital.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>📝 Jurnal 7 KAIH</h3>
+                    <p>
+                        Akses jurnal digital 7 Kebiasaan Anak
+                        Indonesia Hebat.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>📂 Download</h3>
+                    <p>
+                        Berbagai dokumen dan informasi yang
+                        dapat diunduh oleh warga sekolah.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak">
+            <h2>Kontak Sekolah</h2>
+
+            <div class="card">
+                <p><strong>SDN Kalibaru 3 Depok</strong></p>
+                <p>Kota Depok, Jawa Barat</p>
+                <p>Website Portal Sekolah</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 SDN Kalibaru 3 Depok</p>
+        <p>Website resmi sekolah</p>
+    </footer>
+
+</body>
+</html>
