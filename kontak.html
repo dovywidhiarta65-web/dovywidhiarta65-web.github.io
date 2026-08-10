@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kontak | SDN Kalibaru 3 Depok</title>
 
+<meta name="description"
+content="Informasi kontak SDN Kalibaru 3 Depok. Alamat, telepon, email, jam layanan, dan lokasi sekolah.">
+
+
 <style>
+
+/* =========================
+RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f8f7;
-    color: #173b38;
+    color: #183b36;
+    background: #f7faf9;
     line-height: 1.6;
 }
 
@@ -25,25 +41,33 @@ a {
     color: inherit;
 }
 
-/* HEADER */
 
-header {
-    background: #ffffff;
-    border-bottom: 1px solid #e5ecea;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+/* =========================
+NAVBAR
+========================= */
 
 .navbar {
-    max-width: 1180px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #e5eeee;
+}
+
+.nav-container {
+    max-width: 1200px;
     margin: auto;
-    min-height: 68px;
-    padding: 12px 24px;
+
+    padding: 14px 24px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    gap: 30px;
 }
 
 .brand {
@@ -52,324 +76,610 @@ header {
     gap: 12px;
 }
 
-.logo {
-    width: 46px;
-    height: 46px;
-    border-radius: 14px;
+.brand-logo {
+    width: 45px;
+    height: 45px;
 
-    background: #0c8478;
-    color: white;
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-size: 20px;
-    font-weight: 800;
 }
 
-.brand-text strong {
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
     display: block;
-    color: #08766d;
+}
+
+.brand-text h1 {
     font-size: 17px;
+    line-height: 1.2;
+    color: #075f53;
 }
 
 .brand-text span {
-    display: block;
-    color: #72817f;
     font-size: 12px;
+    color: #6b7f7b;
 }
 
-nav {
+.nav-menu {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 6px;
 }
 
-nav a {
-    color: #405654;
+.nav-menu a {
+    padding: 9px 13px;
+    border-radius: 8px;
+
     font-size: 14px;
+    color: #35514d;
+
+    transition: 0.25s;
 }
 
-nav a:hover {
-    color: #087f75;
+.nav-menu a:hover {
+    background: #e7f5f2;
+    color: #087f6e;
 }
 
-nav a.active {
-    background: #0c8478;
+.nav-menu a.active {
+    background: #087f6e;
     color: white;
-    padding: 11px 17px;
-    border-radius: 12px;
 }
 
-/* HERO */
+
+/* =========================
+HERO
+========================= */
 
 .hero {
-    background: linear-gradient(135deg, #075e57, #0d887d);
+
+    background:
+    linear-gradient(
+        135deg,
+        #064f47,
+        #087f6e
+    );
+
     color: white;
-    padding: 75px 24px;
+
+    padding: 85px 20px;
 }
 
-.hero-inner {
-    max-width: 1180px;
+.hero-container {
+    max-width: 1100px;
     margin: auto;
 }
 
-.hero small {
+.hero-content {
+    max-width: 720px;
+}
+
+.hero-badge {
+
     display: inline-block;
-    background: rgba(255,255,255,0.14);
-    border: 1px solid rgba(255,255,255,0.25);
+
     padding: 7px 14px;
+
+    border:
+    1px solid
+    rgba(255,255,255,0.30);
+
+    background:
+    rgba(255,255,255,0.10);
+
     border-radius: 30px;
+
+    font-size: 13px;
+
     margin-bottom: 20px;
 }
 
-.hero h1 {
-    font-size: clamp(38px, 5vw, 62px);
+.hero h2 {
+
+    font-size:
+    clamp(40px, 6vw, 65px);
+
     line-height: 1.05;
-    margin-bottom: 18px;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #72e1c9;
 }
 
 .hero p {
+
     max-width: 650px;
+
     font-size: 18px;
-    color: #e4f7f4;
+
+    color:
+    rgba(255,255,255,0.88);
 }
 
-/* CONTENT */
 
-.container {
-    max-width: 1180px;
+/* =========================
+CONTENT
+========================= */
+
+.content-section {
+    padding: 85px 20px;
+}
+
+.section-container {
+    max-width: 1100px;
     margin: auto;
-    padding: 70px 24px;
 }
 
-.section-label {
-    color: #0c8478;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
-
-.section-title {
-    font-size: 34px;
-    margin-bottom: 12px;
-}
-
-.section-desc {
-    color: #6b7b79;
-    max-width: 700px;
+.section-heading {
     margin-bottom: 40px;
 }
 
-/* CONTACT GRID */
+.section-label {
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-}
+    color: #087f6e;
 
-.contact-card {
-    background: white;
-    border: 1px solid #e4ecea;
-    border-radius: 20px;
-    padding: 30px;
+    font-size: 13px;
 
-    box-shadow: 0 10px 30px rgba(18,67,61,0.06);
-}
+    font-weight: bold;
 
-.contact-card h2 {
-    color: #075f58;
-    font-size: 21px;
-    margin-bottom: 10px;
-}
+    text-transform: uppercase;
 
-.contact-card p {
-    color: #687875;
-    font-size: 14px;
-}
+    letter-spacing: 1.5px;
 
-.contact-icon {
-    width: 55px;
-    height: 55px;
-    border-radius: 16px;
-    background: #e3f5f2;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-
-/* MAP */
-
-.map-box {
-    margin-top: 45px;
-    min-height: 280px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #e2f5f2,
-            #f5fbfa
-        );
-
-    border-radius: 24px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-    padding: 40px;
-}
-
-.map-content {
-    max-width: 600px;
-}
-
-.map-icon {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.map-content h2 {
-    color: #075f58;
     margin-bottom: 8px;
 }
 
+.section-heading h2 {
+
+    font-size: 36px;
+
+    line-height: 1.15;
+
+    color: #163f38;
+}
+
+.section-heading p {
+
+    color: #71817e;
+
+    margin-top: 10px;
+
+    max-width: 650px;
+}
+
+
+/* =========================
+CONTACT GRID
+========================= */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 45px;
+}
+
+.contact-card {
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 18px;
+
+    border:
+    1px solid
+    #e4ecea;
+
+    box-shadow:
+    0 10px 30px
+    rgba(18,67,61,0.06);
+
+    transition: 0.25s;
+}
+
+.contact-card:hover {
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 15px 35px
+    rgba(18,67,61,0.10);
+}
+
+.contact-icon {
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 18px;
+
+    border-radius: 16px;
+
+    background: #e4f5f1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+.contact-card h2 {
+
+    color: #075f53;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+
+    color: #63736f;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+MAP
+========================= */
+
+.map-box {
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #e5f7f3,
+        #f3fbf9
+    );
+
+    border:
+    1px solid
+    #d8eeea;
+
+    text-align: center;
+}
+
+.map-content {
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.map-icon {
+
+    width: 65px;
+    height: 65px;
+
+    margin:
+    0 auto 15px;
+
+    border-radius: 18px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+
+    box-shadow:
+    0 8px 20px
+    rgba(18,67,61,0.06);
+}
+
+.map-content h2 {
+
+    color: #075f53;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
 .map-content p {
-    color: #687875;
+
+    color: #5f736f;
+
+    font-size: 14px;
+
     margin-bottom: 20px;
 }
 
 .map-button {
+
     display: inline-block;
-    background: #0c8478;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    background: #087f6e;
+
     color: white;
-    padding: 11px 20px;
-    border-radius: 10px;
-    font-size: 14px;
+
+    font-size: 13px;
+
     font-weight: bold;
+
+    transition: 0.25s;
 }
 
-/* FOOTER */
+.map-button:hover {
+
+    background: #075f53;
+}
+
+
+/* =========================
+FOOTER
+========================= */
 
 footer {
-    background: #063f3a;
-    color: #d9efec;
-    margin-top: 30px;
+
+    background: #063f37;
+
+    color: white;
+
+    padding:
+    45px 20px 25px;
+
+    margin-top: 0;
 }
 
-.footer-inner {
-    max-width: 1180px;
+.footer-grid {
+
+    max-width: 1100px;
     margin: auto;
-    padding: 55px 24px 25px;
 
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+
+    grid-template-columns:
+    2fr 1fr 1fr;
+
     gap: 50px;
 }
 
-footer h3 {
-    color: white;
+.footer-logo {
+
+    width: 70px;
+    height: 70px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.footer-brand h2 {
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+
+    color:
+    rgba(255,255,255,0.65);
+
+    font-size: 13px;
+
+    max-width: 400px;
+}
+
+.footer-column h3 {
+
+    font-size: 14px;
+
     margin-bottom: 15px;
 }
 
-footer p,
-footer a {
-    color: #b9d7d3;
-    font-size: 14px;
-}
+.footer-column a {
 
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-}
+    display: block;
 
-.footer-bottom {
-    max-width: 1180px;
-    margin: auto;
-    padding: 18px 24px;
-
-    border-top: 1px solid rgba(255,255,255,0.12);
+    color:
+    rgba(255,255,255,0.65);
 
     font-size: 13px;
-    color: #9fc3be;
+
+    margin-bottom: 8px;
+
+    transition: 0.2s;
 }
 
-/* MOBILE */
+.footer-column a:hover {
+    color: white;
+}
 
-@media (max-width: 760px) {
+.copyright {
 
-    .navbar {
-        flex-direction: column;
-        gap: 14px;
-        padding: 14px 18px;
+    max-width: 1100px;
+    margin: 35px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+    1px solid
+    rgba(255,255,255,0.1);
+
+    color:
+    rgba(255,255,255,0.45);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+        display: none;
     }
 
-    nav {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 14px;
+    .contact-grid {
+        grid-template-columns:
+        repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns:
+        1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        padding:
+        12px 16px;
+    }
+
+    .brand-text span {
+        display: none;
     }
 
     .hero {
-        padding: 55px 20px;
+        padding:
+        65px 20px;
+    }
+
+    .hero h2 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .content-section {
+        padding:
+        65px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
-    .footer-inner {
+    .contact-card {
+        padding: 30px;
+    }
+
+    .map-box {
+        padding: 30px 25px;
+    }
+
+    .footer-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-
-    .container {
-        padding: 50px 20px;
-    }
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- HEADER -->
 
-<header>
+<!-- =========================
+NAVBAR
+========================= -->
 
-<div class="navbar">
+<header class="navbar">
+
+<div class="nav-container">
+
 
 <a href="index.html" class="brand">
 
-<div class="logo">K3</div>
+<div class="brand-logo">
+<img src="LOGO%20KB3.png" alt="Logo SDN Kalibaru 3">
+</div>
 
 <div class="brand-text">
-<strong>SDN KALIBARU 3</strong>
-<span>Depok, Jawa Barat</span>
+
+<h1>
+SDN KALIBARU 3
+</h1>
+
+<span>
+Depok, Jawa Barat
+</span>
+
 </div>
 
 </a>
 
-<nav>
 
-<a href="index.html">Beranda</a>
+<nav class="nav-menu">
 
-<a href="profil.html">Profil</a>
+<a href="index.html">
+Beranda
+</a>
 
-<a href="layanan.html">Layanan</a>
+<a href="profil.html">
+Profil
+</a>
 
-<a href="informasi.html">Informasi</a>
+<a href="layanan.html">
+Layanan
+</a>
 
-<a href="kontak.html" class="active">Kontak</a>
+<a href="informasi.html">
+Informasi
+</a>
+
+<a href="kontak.html" class="active">
+Kontak
+</a>
 
 </nav>
 
@@ -378,47 +688,84 @@ footer a {
 </header>
 
 
-<!-- HERO -->
+
+<!-- =========================
+HERO
+========================= -->
 
 <section class="hero">
 
-<div class="hero-inner">
+<div class="hero-container">
 
-<small>📍 Hubungi Kami</small>
+<div class="hero-content">
 
-<h1>
-Kontak<br>
+
+<div class="hero-badge">
+📍 Hubungi Kami
+</div>
+
+
+<h2>
+
+Kontak
+
+<span>
 SDN Kalibaru 3
-</h1>
+</span>
+
+</h2>
+
 
 <p>
+
 Silakan gunakan informasi berikut untuk
 menghubungi dan menemukan SDN Kalibaru 3 Depok.
+
 </p>
+
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- CONTENT -->
 
-<main class="container">
+<!-- =========================
+CONTENT
+========================= -->
+
+<main>
+
+<section class="content-section">
+
+<div class="section-container">
+
+
+<div class="section-heading">
 
 <div class="section-label">
 INFORMASI KONTAK
 </div>
 
-<h2 class="section-title">
+<h2>
 Hubungi Sekolah
 </h2>
 
-<p class="section-desc">
+<p>
 Informasi kontak resmi sekolah akan membantu
 siswa, orang tua, dan masyarakat mendapatkan
 informasi yang diperlukan.
 </p>
 
+</div>
+
+
+
+<!-- =========================
+CONTACT CARDS
+========================= -->
 
 <div class="contact-grid">
 
@@ -427,9 +774,13 @@ informasi yang diperlukan.
 
 <div class="contact-card">
 
-<div class="contact-icon">📍</div>
+<div class="contact-icon">
+📍
+</div>
 
-<h2>Alamat Sekolah</h2>
+<h2>
+Alamat Sekolah
+</h2>
 
 <p>
 Alamat lengkap SDN Kalibaru 3 Depok
@@ -439,13 +790,18 @@ akan ditampilkan di bagian ini.
 </div>
 
 
+
 <!-- TELEPON -->
 
 <div class="contact-card">
 
-<div class="contact-icon">☎️</div>
+<div class="contact-icon">
+☎️
+</div>
 
-<h2>Telepon</h2>
+<h2>
+Telepon
+</h2>
 
 <p>
 Nomor telepon resmi sekolah
@@ -455,13 +811,18 @@ akan ditampilkan di bagian ini.
 </div>
 
 
+
 <!-- EMAIL -->
 
 <div class="contact-card">
 
-<div class="contact-icon">✉️</div>
+<div class="contact-icon">
+✉️
+</div>
 
-<h2>Email</h2>
+<h2>
+Email
+</h2>
 
 <p>
 Alamat email resmi sekolah
@@ -471,13 +832,18 @@ akan ditampilkan di bagian ini.
 </div>
 
 
+
 <!-- JAM LAYANAN -->
 
 <div class="contact-card">
 
-<div class="contact-icon">🕐</div>
+<div class="contact-icon">
+🕐
+</div>
 
-<h2>Jam Layanan</h2>
+<h2>
+Jam Layanan
+</h2>
 
 <p>
 Informasi jam layanan sekolah
@@ -490,13 +856,18 @@ akan ditampilkan di bagian ini.
 </div>
 
 
-<!-- MAP -->
+
+<!-- =========================
+MAP
+========================= -->
 
 <section class="map-box">
 
 <div class="map-content">
 
-<div class="map-icon">🗺️</div>
+<div class="map-icon">
+🗺️
+</div>
 
 <h2>
 Lokasi Sekolah
@@ -511,21 +882,33 @@ setelah alamat resmi sekolah dikonfirmasi.
 
 </section>
 
+
+</div>
+
+</section>
+
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+FOOTER
+========================= -->
 
 <footer>
 
-<div class="footer-inner">
+<div class="footer-grid">
 
 
-<div>
+<div class="footer-brand">
 
-<h3>
+<div class="footer-logo">
+<img src="LOGO%20KB3.png" alt="Logo SDN Kalibaru 3">
+</div>
+
+<h2>
 SDN KALIBARU 3 DEPOK
-</h3>
+</h2>
 
 <p>
 Portal resmi SDN Kalibaru 3 Depok.
@@ -536,32 +919,42 @@ dan layanan digital sekolah.
 </div>
 
 
-<div>
+
+<div class="footer-column">
 
 <h3>
 Navigasi
 </h3>
 
-<div class="footer-links">
+<a href="index.html">
+Beranda
+</a>
 
-<a href="index.html">Beranda</a>
-<a href="profil.html">Profil</a>
-<a href="layanan.html">Layanan</a>
-<a href="informasi.html">Informasi</a>
-<a href="kontak.html">Kontak</a>
+<a href="profil.html">
+Profil
+</a>
+
+<a href="layanan.html">
+Layanan
+</a>
+
+<a href="informasi.html">
+Informasi
+</a>
+
+<a href="kontak.html">
+Kontak
+</a>
 
 </div>
 
-</div>
 
 
-<div>
+<div class="footer-column">
 
 <h3>
 Layanan
 </h3>
-
-<div class="footer-links">
 
 <a href="jurnal.html">
 Jurnal 7 KAIH
@@ -580,13 +973,12 @@ Layanan Digital
 
 </div>
 
-</div>
-
 
 </div>
 
 
-<div class="footer-bottom">
+
+<div class="copyright">
 
 © 2026 SDN Kalibaru 3 Depok.
 Semua hak dilindungi.
@@ -595,5 +987,7 @@ Semua hak dilindungi.
 
 </footer>
 
+
 </body>
+
 </html>
