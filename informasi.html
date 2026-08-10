@@ -1,530 +1,734 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Informasi | SDN Kalibaru 3 Depok</title>
+    <meta charset="UTF-8">
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f8f7;
-    color: #173b38;
-    line-height: 1.6;
-}
+    <title>Informasi - SDN Kalibaru 3 Depok</title>
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+    <style>
 
-/* HEADER */
-header {
-    background: #ffffff;
-    border-bottom: 1px solid #e5ecea;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.navbar {
-    max-width: 1180px;
-    margin: auto;
-    height: 68px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 24px;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f8;
+            color: #333;
+            line-height: 1.7;
+        }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
 
-.logo {
-    width: 46px;
-    height: 46px;
-    border-radius: 14px;
-    background: #0c8478;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 800;
-}
+        /* =========================
+           HEADER
+        ========================= */
 
-.brand-text strong {
-    display: block;
-    color: #08766d;
-    font-size: 17px;
-}
+        header {
+            background: #13847c;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
 
-.brand-text span {
-    display: block;
-    color: #72817f;
-    font-size: 12px;
-}
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 5px;
+        }
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
+        header p {
+            font-size: 20px;
+        }
 
-nav a {
-    color: #405654;
-    font-size: 14px;
-    transition: 0.2s;
-}
 
-nav a:hover {
-    color: #087f75;
-}
+        /* =========================
+           NAVBAR
+        ========================= */
 
-nav a.active {
-    background: #0c8478;
-    color: white;
-    padding: 11px 17px;
-    border-radius: 12px;
-}
+        nav {
+            background: #106b65;
 
-/* HERO */
-.hero {
-    background: linear-gradient(135deg, #075e57, #0d887d);
-    color: white;
-    padding: 78px 24px;
-}
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
 
-.hero-inner {
-    max-width: 1180px;
-    margin: auto;
-}
+            gap: 10px;
 
-.hero small {
-    display: inline-block;
-    background: rgba(255,255,255,0.14);
-    border: 1px solid rgba(255,255,255,0.25);
-    padding: 7px 14px;
-    border-radius: 30px;
-    margin-bottom: 20px;
-}
+            padding: 16px;
+        }
 
-.hero h1 {
-    font-size: clamp(38px, 5vw, 64px);
-    line-height: 1.05;
-    margin-bottom: 20px;
-}
+        nav a {
+            color: white;
 
-.hero p {
-    max-width: 650px;
-    font-size: 18px;
-    color: #e4f7f4;
-}
+            text-decoration: none;
 
-/* CONTENT */
-.container {
-    max-width: 1180px;
-    margin: auto;
-    padding: 70px 24px;
-}
+            padding: 8px 18px;
 
-.section-label {
-    color: #0c8478;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
+            font-weight: bold;
 
-.section-title {
-    font-size: 34px;
-    margin-bottom: 12px;
-}
+            border-radius: 8px;
 
-.section-desc {
-    color: #6b7b79;
-    max-width: 700px;
-    margin-bottom: 38px;
-}
+            transition: 0.2s;
+        }
 
-/* CARDS */
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-}
+        nav a:hover {
+            background: rgba(255,255,255,0.15);
+        }
 
-.card {
-    background: white;
-    border: 1px solid #e4ecea;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(18, 67, 61, 0.06);
-    transition: 0.25s;
-}
+        nav a.active {
+            background: rgba(255,255,255,0.18);
+        }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(18, 67, 61, 0.11);
-}
 
-.icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 15px;
-    background: #e3f5f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    margin-bottom: 20px;
-}
+        /* =========================
+           MAIN
+        ========================= */
 
-.card h2 {
-    font-size: 21px;
-    margin-bottom: 10px;
-}
+        main {
+            max-width: 1100px;
 
-.card p {
-    color: #687875;
-    margin-bottom: 20px;
-}
+            margin: auto;
 
-.card-button {
-    display: inline-block;
-    background: #0c8478;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: bold;
-}
+            padding: 55px 25px;
+        }
 
-.card-button:hover {
-    background: #096d64;
-}
 
-/* FEATURE */
-.feature {
-    margin-top: 60px;
-    background: #e8f7f4;
-    border-radius: 24px;
-    padding: 38px;
-}
+        /* =========================
+           JUDUL
+        ========================= */
 
-.feature h2 {
-    font-size: 25px;
-    margin-bottom: 10px;
-}
+        .judul {
+            text-align: center;
 
-.feature p {
-    color: #58706c;
-}
+            margin-bottom: 45px;
+        }
 
-/* FOOTER */
-footer {
-    background: #063f3a;
-    color: #d9efec;
-    margin-top: 30px;
-}
+        .judul h2 {
+            color: #106f69;
 
-.footer-inner {
-    max-width: 1180px;
-    margin: auto;
-    padding: 55px 24px 25px;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 50px;
-}
+            font-size: 38px;
 
-footer h3 {
-    color: white;
-    margin-bottom: 15px;
-}
+            margin-bottom: 10px;
+        }
 
-footer p,
-footer a {
-    color: #b9d7d3;
-    font-size: 14px;
-}
+        .judul p {
+            color: #666;
 
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-}
+            font-size: 18px;
+        }
 
-.footer-bottom {
-    max-width: 1180px;
-    margin: auto;
-    padding: 18px 24px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    font-size: 13px;
-    color: #9fc3be;
-}
 
-/* MOBILE */
-@media (max-width: 760px) {
+        /* =========================
+           INFO GRID
+        ========================= */
 
-    .navbar {
-        height: auto;
-        padding: 14px 18px;
-        flex-direction: column;
-        gap: 14px;
-    }
+        .info-grid {
+            display: grid;
 
-    nav {
-        width: 100%;
-        justify-content: center;
-        gap: 14px;
-        flex-wrap: wrap;
-    }
+            grid-template-columns: repeat(2, 1fr);
 
-    nav a {
-        font-size: 13px;
-    }
+            gap: 25px;
 
-    .hero {
-        padding: 55px 20px;
-    }
+            margin-bottom: 45px;
+        }
 
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+        /* =========================
+           CARD
+        ========================= */
 
-    .container {
-        padding: 50px 20px;
-    }
-}
-</style>
+        .card {
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 35px 30px;
+
+            text-align: center;
+
+            box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+
+            border: 1px solid #e7eeee;
+
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.10);
+        }
+
+        .icon {
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            color: #106f69;
+
+            font-size: 23px;
+
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+
+            margin-bottom: 22px;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .card-button {
+            display: inline-block;
+
+            background: #13847c;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 11px 20px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+        .card-button:hover {
+            background: #106b65;
+        }
+
+
+        /* =========================
+           FEATURE
+        ========================= */
+
+        .feature {
+            background:
+                linear-gradient(
+                    135deg,
+                    #dff7f3,
+                    #f1fbfa
+                );
+
+            border-radius: 20px;
+
+            padding: 40px;
+
+            text-align: center;
+        }
+
+        .feature h2 {
+            color: #106f69;
+
+            font-size: 28px;
+
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            max-width: 800px;
+
+            margin: auto;
+
+            color: #555;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #106b65;
+
+            color: white;
+
+            padding: 35px 20px 25px;
+
+            margin-top: 20px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr;
+
+            gap: 50px;
+        }
+
+        .footer-inner h3 {
+            font-size: 16px;
+
+            margin-bottom: 12px;
+        }
+
+        .footer-inner p {
+            color:
+                rgba(255,255,255,0.78);
+
+            font-size: 13px;
+
+            max-width: 400px;
+        }
+
+        .footer-links a {
+            display: block;
+
+            color:
+                rgba(255,255,255,0.78);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            margin-bottom: 7px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+
+            margin: 30px auto 0;
+
+            padding-top: 18px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            color:
+                rgba(255,255,255,0.60);
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .judul h2 {
+                font-size: 31px;
+            }
+
+            nav {
+                gap: 4px;
+            }
+
+            nav a {
+                padding: 7px 12px;
+
+                font-size: 14px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+
+                gap: 30px;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            main {
+                padding:
+                    45px 18px 60px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding:
+                    30px 22px;
+            }
+
+            .feature {
+                padding: 30px 22px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<!-- HEADER -->
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-    <div class="navbar">
 
-        <a href="index.html" class="brand">
-            <div class="logo">K3</div>
+    <h1>
+        SDN KALIBARU 3 DEPOK
+    </h1>
 
-            <div class="brand-text">
-                <strong>SDN KALIBARU 3</strong>
-                <span>Depok, Jawa Barat</span>
-            </div>
-        </a>
+    <p>
+        Sekolah Dasar Negeri Kalibaru 3
+    </p>
 
-        <nav>
-            <a href="index.html">Beranda</a>
-            <a href="profil.html">Profil</a>
-            <a href="layanan.html">Layanan</a>
-            <a href="informasi.html" class="active">Informasi</a>
-            <a href="kontak.html">Kontak</a>
-        </nav>
-
-    </div>
 </header>
 
 
-<!-- HERO -->
-<section class="hero">
 
-    <div class="hero-inner">
+<!-- =========================
+     NAVBAR
+========================= -->
 
-        <small>📢 Pusat Informasi Sekolah</small>
+<nav>
 
-        <h1>
-            Informasi<br>
-            SDN Kalibaru 3
-        </h1>
+    <a href="index.html">
+        Beranda
+    </a>
+
+    <a href="profil.html">
+        Profil
+    </a>
+
+    <a href="layanan.html">
+        Layanan
+    </a>
+
+    <a href="informasi.html"
+       class="active">
+        Informasi
+    </a>
+
+    <a href="kontak.html">
+        Kontak
+    </a>
+
+</nav>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- JUDUL -->
+
+    <section class="judul">
+
+        <h2>
+            Informasi Terbaru
+        </h2>
 
         <p>
-            Temukan informasi, pengumuman, agenda kegiatan,
-            berita, serta berbagai dokumen penting SDN Kalibaru 3 Depok.
+            Halaman ini menjadi pusat informasi digital
+            SDN Kalibaru 3 Depok untuk siswa,
+            orang tua, guru, dan masyarakat.
         </p>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- CONTENT -->
-<main class="container">
 
-    <div class="section-label">
-        INFORMASI SEKOLAH
-    </div>
+    <!-- =========================
+         INFORMASI
+    ========================= -->
 
-    <h2 class="section-title">
-        Informasi Terbaru
-    </h2>
+    <section class="info-grid">
 
-    <p class="section-desc">
-        Halaman ini menjadi pusat informasi digital SDN Kalibaru 3 Depok
-        untuk siswa, orang tua, guru, dan masyarakat.
-    </p>
-
-
-    <div class="info-grid">
 
         <!-- PENGUMUMAN -->
+
         <article class="card">
 
-            <div class="icon">📢</div>
+            <div class="icon">
+                📢
+            </div>
 
-            <h2>Pengumuman Sekolah</h2>
+            <h2>
+                Pengumuman Sekolah
+            </h2>
 
             <p>
-                Informasi dan pemberitahuan resmi mengenai kegiatan
-                serta berbagai hal penting di lingkungan sekolah.
+                Informasi dan pemberitahuan resmi mengenai
+                kegiatan serta berbagai hal penting
+                di lingkungan sekolah.
             </p>
 
-            <a href="#" class="card-button">
+            <a href="#"
+               class="card-button">
+
                 Lihat Pengumuman →
+
             </a>
 
         </article>
 
 
+
         <!-- AGENDA -->
+
         <article class="card">
 
-            <div class="icon">📅</div>
+            <div class="icon">
+                📅
+            </div>
 
-            <h2>Agenda & Kegiatan</h2>
+            <h2>
+                Agenda &amp; Kegiatan
+            </h2>
 
             <p>
                 Jadwal kegiatan sekolah, kegiatan pembelajaran,
                 peringatan hari besar, dan agenda lainnya.
             </p>
 
-            <a href="#" class="card-button">
+            <a href="#"
+               class="card-button">
+
                 Lihat Agenda →
+
             </a>
 
         </article>
 
 
+
         <!-- BERITA -->
+
         <article class="card">
 
-            <div class="icon">📰</div>
+            <div class="icon">
+                📰
+            </div>
 
-            <h2>Berita Sekolah</h2>
+            <h2>
+                Berita Sekolah
+            </h2>
 
             <p>
                 Kabar terbaru mengenai kegiatan, prestasi,
                 dan berbagai aktivitas SDN Kalibaru 3 Depok.
             </p>
 
-            <a href="#" class="card-button">
+            <a href="#"
+               class="card-button">
+
                 Baca Berita →
+
             </a>
 
         </article>
 
 
+
         <!-- DOKUMEN -->
+
         <article class="card">
 
-            <div class="icon">📄</div>
+            <div class="icon">
+                📄
+            </div>
 
-            <h2>Dokumen & Unduhan</h2>
+            <h2>
+                Dokumen &amp; Unduhan
+            </h2>
 
             <p>
                 Kumpulan dokumen dan berkas yang dapat diakses
                 oleh warga sekolah sesuai kebutuhan.
             </p>
 
-            <a href="#" class="card-button">
+            <a href="#"
+               class="card-button">
+
                 Lihat Dokumen →
+
             </a>
 
         </article>
 
-    </div>
+
+    </section>
 
 
-    <!-- FEATURE -->
+
+    <!-- =========================
+         FEATURE
+    ========================= -->
+
     <section class="feature">
 
-        <h2>🌱 Portal Informasi SDN Kalibaru 3</h2>
+        <h2>
+            🌱 Portal Informasi SDN Kalibaru 3
+        </h2>
 
         <p>
-            Website ini dikembangkan sebagai sarana informasi dan layanan
-            digital sekolah yang mudah diakses oleh seluruh warga sekolah
-            dan masyarakat.
+            Website ini dikembangkan sebagai sarana informasi
+            dan layanan digital sekolah yang mudah diakses
+            oleh seluruh warga sekolah dan masyarakat.
         </p>
 
     </section>
 
+
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     <div class="footer-inner">
 
+
+        <!-- IDENTITAS -->
+
         <div>
-            <h3>SDN KALIBARU 3 DEPOK</h3>
+
+            <h3>
+                SDN KALIBARU 3 DEPOK
+            </h3>
 
             <p>
                 Portal resmi SDN Kalibaru 3 Depok.
                 Menjadi ruang informasi, komunikasi,
                 dan layanan digital sekolah.
             </p>
+
         </div>
 
+
+
+        <!-- NAVIGASI -->
 
         <div>
-            <h3>Navigasi</h3>
+
+            <h3>
+                Navigasi
+            </h3>
 
             <div class="footer-links">
-                <a href="index.html">Beranda</a>
-                <a href="profil.html">Profil</a>
-                <a href="layanan.html">Layanan</a>
-                <a href="informasi.html">Informasi</a>
-                <a href="kontak.html">Kontak</a>
+
+                <a href="index.html">
+                    Beranda
+                </a>
+
+                <a href="profil.html">
+                    Profil
+                </a>
+
+                <a href="layanan.html">
+                    Layanan
+                </a>
+
+                <a href="informasi.html">
+                    Informasi
+                </a>
+
+                <a href="kontak.html">
+                    Kontak
+                </a>
+
             </div>
+
         </div>
 
+
+
+        <!-- LAYANAN -->
 
         <div>
-            <h3>Layanan</h3>
+
+            <h3>
+                Layanan
+            </h3>
 
             <div class="footer-links">
-                <a href="jurnal.html">Jurnal 7 KAIH</a>
-                <a href="#">Pembelajaran</a>
-                <a href="#">Dokumen</a>
-                <a href="#">Galeri</a>
+
+                <a href="jurnal.html">
+                    Jurnal 7 KAIH
+                </a>
+
+                <a href="#">
+                    Pembelajaran
+                </a>
+
+                <a href="#">
+                    Dokumen
+                </a>
+
+                <a href="#">
+                    Galeri
+                </a>
+
             </div>
+
         </div>
+
 
     </div>
 
 
     <div class="footer-bottom">
-        © 2026 SDN Kalibaru 3 Depok. Semua hak dilindungi.
+
+        © 2026 SDN Kalibaru 3 Depok.
+        Semua hak dilindungi.
+
     </div>
 
 </footer>
 
+
 </body>
+
 </html>
