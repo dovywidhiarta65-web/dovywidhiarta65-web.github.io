@@ -1,376 +1,1158 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Sekolah | SDN Kalibaru 3 Depok</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7f8;
-            color: #333;
-            line-height: 1.7;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #13847c;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-        }
+<title>Profil Sekolah | SDN Kalibaru 3 Depok</title>
 
-        header h1 {
-            font-size: 34px;
-            margin-bottom: 5px;
-        }
+<meta name="description"
+content="Profil SDN Kalibaru 3 Depok. Mengenal lebih dekat satuan pendidikan, visi, misi, dan komitmen sekolah.">
 
-        header p {
-            font-size: 20px;
-        }
+<style>
 
-        nav {
-            background: #106b65;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 16px;
-        }
+/* =========================
+   RESET
+========================= */
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 18px;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: 0.2s;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        nav a:hover {
-            background: rgba(255,255,255,0.15);
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        nav a.active {
-            background: rgba(255,255,255,0.18);
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #183b36;
+    background: #f7faf9;
+    line-height: 1.6;
+}
 
-        main {
-            max-width: 1100px;
-            margin: auto;
-            padding: 55px 25px;
-        }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-        .judul {
-            text-align: center;
-            margin-bottom: 45px;
-        }
 
-        .judul h2 {
-            color: #106f69;
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
+/* =========================
+   NAVBAR
+========================= */
 
-        .judul p {
-            color: #666;
-            font-size: 18px;
-        }
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-        .profil-utama {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-            margin-bottom: 45px;
-        }
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px);
 
-        .foto-sekolah {
-            min-height: 380px;
-            background: #e8f5f3;
-        }
+    border-bottom: 1px solid #e5eeee;
+}
 
-        .foto-sekolah img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
 
-        .deskripsi {
-            padding: 45px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    padding: 14px 24px;
 
-        .deskripsi h3 {
-            color: #106f69;
-            font-size: 28px;
-            margin-bottom: 18px;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        .deskripsi p {
-            margin-bottom: 15px;
-            color: #555;
-        }
+    gap: 30px;
+}
 
-        .info-singkat {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 45px;
-        }
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        .info-card {
-            background: white;
-            border-radius: 16px;
-            padding: 28px 20px;
-            text-align: center;
-            box-shadow: 0 6px 22px rgba(0,0,0,0.06);
-        }
+.brand-icon {
+    width: 45px;
+    height: 45px;
 
-        .info-card .ikon {
-            font-size: 35px;
-            margin-bottom: 12px;
-        }
+    background: #087f6e;
+    color: white;
 
-        .info-card h4 {
-            color: #106f69;
-            font-size: 19px;
-            margin-bottom: 7px;
-        }
+    border-radius: 12px;
 
-        .info-card p {
-            color: #666;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        .visi-misi {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-bottom: 45px;
-        }
+    font-size: 22px;
+    font-weight: bold;
+}
 
-        .box {
-            background: white;
-            padding: 35px;
-            border-radius: 18px;
-            box-shadow: 0 6px 22px rgba(0,0,0,0.06);
-        }
+.brand-text h1 {
+    font-size: 17px;
+    line-height: 1.2;
+    color: #075f53;
+}
 
-        .box h3 {
-            color: #106f69;
-            font-size: 27px;
-            margin-bottom: 18px;
-        }
+.brand-text span {
+    font-size: 12px;
+    color: #6b7f7b;
+}
 
-        .box p {
-            color: #555;
-        }
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 
-        .box ol {
-            padding-left: 22px;
-            color: #555;
-        }
+.nav-menu a {
+    padding: 9px 13px;
+    border-radius: 8px;
 
-        .penutup {
-            background: linear-gradient(135deg, #dff7f3, #f1fbfa);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-        }
+    font-size: 14px;
+    color: #35514d;
 
-        .penutup h3 {
-            color: #106f69;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
+    transition: 0.25s;
+}
 
-        .penutup p {
-            max-width: 800px;
-            margin: auto;
-            color: #555;
-        }
+.nav-menu a:hover {
+    background: #e7f5f2;
+    color: #087f6e;
+}
 
-        footer {
-            background: #106b65;
-            color: white;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: 20px;
-        }
+.nav-menu a.active {
+    background: #087f6e;
+    color: white;
+}
 
-        footer p {
-            margin: 4px;
-        }
 
-        @media (max-width: 800px) {
+/* =========================
+   HERO
+========================= */
 
-            header h1 {
-                font-size: 28px;
-            }
+.hero {
 
-            header p {
-                font-size: 17px;
-            }
+    background:
+        linear-gradient(
+            135deg,
+            #064f47,
+            #087f6e
+        );
 
-            .profil-utama {
-                grid-template-columns: 1fr;
-            }
+    color: white;
 
-            .foto-sekolah {
-                min-height: 260px;
-            }
+    padding: 85px 20px;
+}
 
-            .deskripsi {
-                padding: 30px;
-            }
+.hero-container {
+    max-width: 1100px;
+    margin: auto;
+}
 
-            .info-singkat {
-                grid-template-columns: 1fr;
-            }
+.hero-content {
+    max-width: 720px;
+}
 
-            .visi-misi {
-                grid-template-columns: 1fr;
-            }
+.hero-badge {
 
-            .judul h2 {
-                font-size: 31px;
-            }
+    display: inline-block;
 
-            nav {
-                gap: 4px;
-            }
+    padding: 7px 14px;
 
-            nav a {
-                padding: 7px 12px;
-                font-size: 14px;
-            }
-        }
-    </style>
+    border:
+        1px solid
+        rgba(255,255,255,0.30);
+
+    background:
+        rgba(255,255,255,0.10);
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+
+    font-size:
+        clamp(40px, 6vw, 65px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #72e1c9;
+}
+
+.hero p {
+
+    max-width: 650px;
+
+    font-size: 18px;
+
+    color:
+        rgba(255,255,255,0.88);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content-section {
+    padding: 85px 20px;
+}
+
+.section-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-label {
+
+    color: #087f6e;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+
+    font-size: 36px;
+
+    line-height: 1.15;
+
+    color: #163f38;
+}
+
+.section-heading p {
+
+    color: #71817e;
+
+    margin-top: 10px;
+
+    max-width: 650px;
+}
+
+
+/* =========================
+   PROFIL UTAMA
+========================= */
+
+.profil-utama {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        #e4ecea;
+
+    box-shadow:
+        0 10px 30px
+        rgba(18,67,61,0.06);
+
+    margin-bottom: 25px;
+}
+
+.foto-sekolah {
+
+    min-height: 400px;
+
+    background: #e4f5f1;
+}
+
+.foto-sekolah img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.deskripsi {
+
+    padding: 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.deskripsi h3 {
+
+    color: #075f53;
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+}
+
+.deskripsi p {
+
+    color: #63736f;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   INFO SINGKAT
+========================= */
+
+.info-singkat {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+    margin-bottom: 45px;
+}
+
+.info-card {
+
+    background: white;
+
+    padding: 28px 20px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        #e4ecea;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px
+        rgba(18,67,61,0.06);
+
+    transition: 0.25s;
+}
+
+.info-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(18,67,61,0.10);
+}
+
+.info-card .ikon {
+
+    width: 58px;
+    height: 58px;
+
+    margin:
+        0 auto 15px;
+
+    border-radius: 16px;
+
+    background: #e4f5f1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+.info-card h4 {
+
+    color: #075f53;
+
+    font-size: 17px;
+
+    margin-bottom: 7px;
+}
+
+.info-card p {
+
+    color: #71817e;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   VISI MISI
+========================= */
+
+.visi-misi {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 45px;
+}
+
+.box {
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        #e4ecea;
+
+    box-shadow:
+        0 10px 30px
+        rgba(18,67,61,0.06);
+}
+
+.box h3 {
+
+    color: #075f53;
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.box p {
+
+    color: #63736f;
+
+    font-size: 14px;
+}
+
+.box ol {
+
+    padding-left: 22px;
+
+    color: #63736f;
+
+    font-size: 14px;
+}
+
+.box li {
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   PENUTUP
+========================= */
+
+.penutup {
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e5f7f3,
+            #f3fbf9
+        );
+
+    border:
+        1px solid
+        #d8eeea;
+
+    text-align: center;
+}
+
+.penutup h3 {
+
+    color: #075f53;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.penutup p {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    color: #5f736f;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #063f37;
+
+    color: white;
+
+    padding:
+        45px 20px 25px;
+
+    margin-top: 0;
+}
+
+.footer-grid {
+
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-brand h2 {
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+
+    color:
+        rgba(255,255,255,0.65);
+
+    font-size: 13px;
+
+    max-width: 400px;
+}
+
+.footer-column h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+
+    display: block;
+
+    color:
+        rgba(255,255,255,0.65);
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+    transition: 0.2s;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.copyright {
+
+    max-width: 1100px;
+    margin: 35px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    color:
+        rgba(255,255,255,0.45);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .profil-utama {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-sekolah {
+        min-height: 300px;
+    }
+
+    .info-singkat {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .visi-misi {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        padding:
+            12px 16px;
+    }
+
+    .brand-text span {
+        display: none;
+    }
+
+    .hero {
+        padding:
+            65px 20px;
+    }
+
+    .hero h2 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .content-section {
+        padding:
+            65px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .foto-sekolah {
+        min-height: 260px;
+    }
+
+    .deskripsi {
+        padding: 30px;
+    }
+
+    .info-singkat {
+        grid-template-columns: 1fr;
+    }
+
+    .visi-misi {
+        grid-template-columns: 1fr;
+    }
+
+    .penutup {
+        padding: 30px 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<header>
-    <h1>SDN KALIBARU 3 DEPOK</h1>
-    <p>Sekolah Dasar Negeri Kalibaru 3</p>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+<div class="nav-container">
+
+
+<a href="index.html" class="brand">
+
+<div class="brand-icon">
+K3
+</div>
+
+<div class="brand-text">
+
+<h1>
+SDN KALIBARU 3
+</h1>
+
+<span>
+Depok, Jawa Barat
+</span>
+
+</div>
+
+</a>
+
+
+<nav class="nav-menu">
+
+<a href="index.html">
+Beranda
+</a>
+
+<a href="profil.html" class="active">
+Profil
+</a>
+
+<a href="layanan.html">
+Layanan
+</a>
+
+<a href="informasi.html">
+Informasi
+</a>
+
+<a href="kontak.html">
+Kontak
+</a>
+
+</nav>
+
+</div>
+
 </header>
 
-<nav>
-    <a href="index.html">Beranda</a>
-    <a href="profil.html" class="active">Profil</a>
-    <a href="index.html#informasi">Informasi</a>
-    <a href="index.html#layanan">Layanan</a>
-    <a href="index.html#kontak">Kontak</a>
-</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div class="hero-content">
+
+
+<div class="hero-badge">
+🏫 Tentang Sekolah
+</div>
+
+
+<h2>
+
+Mengenal
+
+<span>
+SDN Kalibaru 3
+</span>
+
+</h2>
+
+
+<p>
+
+Mengenal lebih dekat SDN Kalibaru 3 Depok,
+satuan pendidikan yang berkomitmen mendukung
+perkembangan akademik dan karakter peserta didik.
+
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTENT
+========================= -->
 
 <main>
 
-    <section class="judul">
-        <h2>Profil Sekolah</h2>
-        <p>Mengenal lebih dekat SDN Kalibaru 3 Depok</p>
-    </section>
+<section class="content-section">
 
-    <section class="profil-utama">
+<div class="section-container">
 
-        <div class="foto-sekolah">
-            <img src="sekolah.jpeg" alt="SDN Kalibaru 3 Depok">
-        </div>
 
-        <div class="deskripsi">
-            <h3>SDN Kalibaru 3 Depok</h3>
+<div class="section-heading">
 
-            <p>
-                Selamat datang di halaman profil SDN Kalibaru 3 Depok.
-                Website ini menjadi salah satu media informasi dan layanan
-                digital bagi warga sekolah serta masyarakat.
-            </p>
+<div class="section-label">
+PROFIL SEKOLAH
+</div>
 
-            <p>
-                SDN Kalibaru 3 berkomitmen untuk memberikan layanan
-                pendidikan yang mendukung perkembangan peserta didik,
-                baik dalam bidang akademik maupun pengembangan karakter.
-            </p>
-        </div>
+<h2>
+Tempat Tumbuh, Belajar,<br>
+dan Berkembang
+</h2>
 
-    </section>
+<p>
+Mengenal lebih dekat lingkungan,
+komitmen, dan arah pendidikan
+SDN Kalibaru 3 Depok.
+</p>
 
-    <section class="info-singkat">
+</div>
 
-        <div class="info-card">
-            <div class="ikon">🏫</div>
-            <h4>Satuan Pendidikan</h4>
-            <p>Sekolah Dasar Negeri</p>
-        </div>
 
-        <div class="info-card">
-            <div class="ikon">📍</div>
-            <h4>Lokasi</h4>
-            <p>Depok, Jawa Barat</p>
-        </div>
 
-        <div class="info-card">
-            <div class="ikon">🇮🇩</div>
-            <h4>Status</h4>
-            <p>Sekolah Negeri</p>
-        </div>
+<!-- =========================
+     PROFIL UTAMA
+========================= -->
 
-    </section>
+<section class="profil-utama">
 
-    <section class="visi-misi">
 
-        <div class="box">
-            <h3>🎯 Visi</h3>
+<div class="foto-sekolah">
 
-            <p>
-                Menjadi sekolah yang mampu memberikan pendidikan yang
-                berkualitas serta membentuk peserta didik yang berkarakter,
-                mandiri, dan siap menghadapi perkembangan zaman.
-            </p>
-        </div>
+<img
+src="sekolah.jpeg"
+alt="SDN Kalibaru 3 Depok"
+>
 
-        <div class="box">
-            <h3>🚀 Misi</h3>
+</div>
 
-            <ol>
-                <li>Melaksanakan pembelajaran yang efektif dan bermakna.</li>
-                <li>Menumbuhkan karakter positif dalam kehidupan sehari-hari.</li>
-                <li>Mendorong peserta didik untuk mengembangkan potensi dan kreativitas.</li>
-                <li>Menciptakan lingkungan sekolah yang aman, nyaman, dan menyenangkan.</li>
-                <li>Membangun kerja sama yang baik antara sekolah, peserta didik, orang tua, dan masyarakat.</li>
-            </ol>
-        </div>
 
-    </section>
+<div class="deskripsi">
 
-    <section class="penutup">
+<h3>
+SDN Kalibaru 3 Depok
+</h3>
 
-        <h3>Mari Bersama Membangun Generasi Hebat</h3>
+<p>
+Selamat datang di halaman profil
+SDN Kalibaru 3 Depok.
+Website ini menjadi salah satu media
+informasi dan layanan digital bagi
+warga sekolah serta masyarakat.
+</p>
 
-        <p>
-            SDN Kalibaru 3 terus berupaya memberikan pengalaman pendidikan
-            yang positif bagi setiap peserta didik dan membangun lingkungan
-            sekolah yang mendukung tumbuh kembang anak.
-        </p>
+<p>
+SDN Kalibaru 3 berkomitmen untuk
+memberikan layanan pendidikan yang
+mendukung perkembangan peserta didik,
+baik dalam bidang akademik maupun
+pengembangan karakter.
+</p>
 
-    </section>
+</div>
+
+
+</section>
+
+
+
+<!-- =========================
+     INFO SINGKAT
+========================= -->
+
+<div class="info-singkat">
+
+
+<div class="info-card">
+
+<div class="ikon">
+🏫
+</div>
+
+<h4>
+Satuan Pendidikan
+</h4>
+
+<p>
+Sekolah Dasar Negeri
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<div class="ikon">
+📍
+</div>
+
+<h4>
+Lokasi
+</h4>
+
+<p>
+Depok, Jawa Barat
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<div class="ikon">
+🇮🇩
+</div>
+
+<h4>
+Status
+</h4>
+
+<p>
+Sekolah Negeri
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     VISI MISI
+========================= -->
+
+<div class="visi-misi">
+
+
+<div class="box">
+
+<h3>
+🎯 Visi
+</h3>
+
+<p>
+Menjadi sekolah yang mampu memberikan
+pendidikan yang berkualitas serta
+membentuk peserta didik yang berkarakter,
+mandiri, dan siap menghadapi perkembangan
+zaman.
+</p>
+
+</div>
+
+
+
+<div class="box">
+
+<h3>
+🚀 Misi
+</h3>
+
+<ol>
+
+<li>
+Melaksanakan pembelajaran yang efektif
+dan bermakna.
+</li>
+
+<li>
+Menumbuhkan karakter positif dalam
+kehidupan sehari-hari.
+</li>
+
+<li>
+Mendorong peserta didik untuk
+mengembangkan potensi dan kreativitas.
+</li>
+
+<li>
+Menciptakan lingkungan sekolah yang
+aman, nyaman, dan menyenangkan.
+</li>
+
+<li>
+Membangun kerja sama yang baik antara
+sekolah, peserta didik, orang tua,
+dan masyarakat.
+</li>
+
+</ol>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     PENUTUP
+========================= -->
+
+<div class="penutup">
+
+<h3>
+Mari Bersama Membangun Generasi Hebat
+</h3>
+
+<p>
+SDN Kalibaru 3 terus berupaya memberikan
+pengalaman pendidikan yang positif bagi
+setiap peserta didik dan membangun
+lingkungan sekolah yang mendukung
+tumbuh kembang anak.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
 
 </main>
 
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-    <p><strong>SDN Kalibaru 3 Depok</strong></p>
-    <p>Website Resmi Sekolah</p>
+
+<div class="footer-grid">
+
+
+<div class="footer-brand">
+
+<h2>
+SDN KALIBARU 3 DEPOK
+</h2>
+
+<p>
+Portal resmi SDN Kalibaru 3 Depok.
+Menjadi ruang informasi, komunikasi,
+dan layanan digital sekolah.
+</p>
+
+</div>
+
+
+
+<div class="footer-column">
+
+<h3>
+Navigasi
+</h3>
+
+<a href="index.html">
+Beranda
+</a>
+
+<a href="profil.html">
+Profil
+</a>
+
+<a href="layanan.html">
+Layanan
+</a>
+
+<a href="informasi.html">
+Informasi
+</a>
+
+<a href="kontak.html">
+Kontak
+</a>
+
+</div>
+
+
+
+<div class="footer-column">
+
+<h3>
+Layanan
+</h3>
+
+<a href="jurnal.html">
+Jurnal 7 KAIH
+</a>
+
+<a
+href="https://s.id/livejurnal7kaihkb3"
+target="_blank"
+rel="noopener noreferrer">
+Rekap Jurnal
+</a>
+
+<a href="informasi.html">
+Pengumuman
+</a>
+
+<a href="informasi.html">
+Agenda
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="copyright">
+
+© 2026 SDN Kalibaru 3 Depok.
+Seluruh hak cipta dilindungi.
+
+</div>
+
 </footer>
 
+
 </body>
+
 </html>
