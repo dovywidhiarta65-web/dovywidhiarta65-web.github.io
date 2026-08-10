@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jurnal 7 KAIH - SDN Kalibaru 3 Depok</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f7;
+            color: #164e49;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            background: #117c75;
+            color: white;
+            text-align: center;
+            padding: 42px 20px 36px;
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #0f655f;
+            text-align: center;
+            padding: 17px 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            opacity: 0.75;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 70px 25px 90px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .intro .icon {
+            width: 82px;
+            height: 82px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            background: #d9f2ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .intro h2 {
+            font-size: 38px;
+            margin-bottom: 14px;
+            color: #116c66;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #526765;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* CARD */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 38px 32px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+            border: 1px solid #e2eeee;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.11);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 23px;
+            color: #126e68;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #667674;
+            line-height: 1.6;
+            font-size: 15px;
+            min-height: 50px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 9px;
+            background: #117c75;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            transition: background 0.2s ease;
+        }
+
+        .button:hover {
+            background: #0c625d;
+        }
+
+        .button.secondary {
+            background: #e2f2f0;
+            color: #116c66;
+        }
+
+        .button.secondary:hover {
+            background: #cfe9e6;
+        }
+
+        /* INFO */
+        .info {
+            max-width: 850px;
+            margin: 35px auto 0;
+            padding: 24px 28px;
+            background: #e8f6f4;
+            border-radius: 14px;
+            text-align: center;
+            color: #35635f;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f655f;
+            color: white;
+            text-align: center;
+            padding: 28px 20px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header {
+                padding: 32px 18px;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            nav {
+                padding: 14px 5px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            main {
+                padding: 50px 18px 65px;
+            }
+
+            .intro h2 {
+                font-size: 30px;
+            }
+
+            .intro p {
+                font-size: 16px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>SDN KALIBARU 3 DEPOK</h1>
+        <p>Sekolah Dasar Negeri Kalibaru 3</p>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="index.html#profil">Profil</a>
+        <a href="index.html#informasi">Informasi</a>
+        <a href="index.html#layanan">Layanan</a>
+        <a href="index.html#kontak">Kontak</a>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section class="intro">
+
+            <div class="icon">
+                🌱
+            </div>
+
+            <h2>Jurnal 7 KAIH</h2>
+
+            <p>
+                Jurnal Digital <strong>7 Kebiasaan Anak Indonesia Hebat</strong>
+                SDN Kalibaru 3 Depok.
+                Catat kebiasaan baikmu setiap hari dan pantau perkembangannya.
+            </p>
+
+        </section>
+
+
+        <!-- SERVICE CARDS -->
+        <section class="cards">
+
+            <!-- ISI JURNAL -->
+            <div class="card">
+
+                <div class="card-icon">
+                    📝
+                </div>
+
+                <h3>Isi Jurnal</h3>
+
+                <p>
+                    Isi jurnal 7 Kebiasaan Anak Indonesia Hebat
+                    setiap hari dengan jujur dan bertanggung jawab.
+                </p>
+
+                <a
+                    href="https://s.id/eyqo2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button"
+                >
+                    Isi Jurnal →
+                </a>
+
+            </div>
+
+
+            <!-- REKAP -->
+            <div class="card">
+
+                <div class="card-icon">
+                    📊
+                </div>
+
+                <h3>Lihat Rekap</h3>
+
+                <p>
+                    Pantau perkembangan pelaksanaan
+                    7 Kebiasaan Anak Indonesia Hebat.
+                </p>
+
+                <a
+                    href="https://s.id/livejurnal7kaihkb3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button secondary"
+                >
+                    Lihat Rekap →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMATION -->
+        <div class="info">
+
+            💡 <strong>Catatan:</strong>
+            Jurnal diisi setiap hari sesuai dengan kebiasaan
+            yang telah dilakukan. Kejujuran dalam mengisi jurnal
+            merupakan bagian penting dari pembentukan kebiasaan baik.
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p><strong>SDN Kalibaru 3 Depok</strong></p>
+
+        <p>
+            Jurnal 7 Kebiasaan Anak Indonesia Hebat
+        </p>
+
+    </footer>
+
+</body>
+</html>
