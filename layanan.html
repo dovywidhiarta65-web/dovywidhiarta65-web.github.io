@@ -1,1 +1,1090 @@
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Layanan Digital | SDN Kalibaru 3 Depok</title>
+
+<meta name="description"
+      content="Layanan digital SDN Kalibaru 3 Depok.">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #183b36;
+    background: #f7faf9;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #e5eeee;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 14px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+
+    background: #087f6e;
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.brand-text h1 {
+    font-size: 17px;
+    line-height: 1.2;
+    color: #075f53;
+}
+
+.brand-text span {
+    font-size: 12px;
+    color: #6b7f7b;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-menu a {
+    padding: 9px 13px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    color: #35514d;
+
+    transition: 0.25s;
+}
+
+.nav-menu a:hover {
+    background: #e7f5f2;
+    color: #087f6e;
+}
+
+.nav-menu a.active {
+    background: #087f6e;
+    color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #064f47,
+            #087f6e
+        );
+
+    color: white;
+
+    padding: 85px 20px;
+}
+
+.hero-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.hero-badge {
+
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.30);
+
+    background:
+        rgba(255,255,255,0.10);
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+
+    font-size:
+        clamp(40px, 6vw, 65px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #72e1c9;
+}
+
+.hero p {
+
+    max-width: 650px;
+
+    font-size: 18px;
+
+    color:
+        rgba(255,255,255,0.88);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.services-section {
+    padding: 85px 20px;
+}
+
+.section-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-label {
+
+    color: #087f6e;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+
+    font-size: 36px;
+
+    line-height: 1.15;
+
+    color: #163f38;
+}
+
+.section-heading p {
+
+    color: #71817e;
+
+    margin-top: 10px;
+
+    max-width: 650px;
+}
+
+
+/* =========================
+   SERVICE GRID
+========================= */
+
+.service-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+
+    background: white;
+
+    padding: 30px 24px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        #e4ecea;
+
+    box-shadow:
+        0 10px 30px
+        rgba(18,67,61,0.06);
+
+    min-height: 275px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.25s;
+}
+
+.service-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 16px 35px
+        rgba(18,67,61,0.10);
+}
+
+.service-icon {
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 16px;
+
+    background: #e4f5f1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+
+    font-size: 19px;
+
+    color: #075f53;
+
+    margin-bottom: 9px;
+}
+
+.service-card p {
+
+    color: #71817e;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.service-link {
+
+    margin-top: auto;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #087f6e;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   ACTIVE CARD
+========================= */
+
+.service-card.active-service {
+
+    border:
+        1px solid
+        #bfe5dd;
+}
+
+
+/* =========================
+   COMING SOON
+========================= */
+
+.service-card.coming-soon {
+
+    opacity: 0.82;
+}
+
+.coming-label {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    background: #f0f4f3;
+
+    color: #73817e;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin-top: auto;
+}
+
+
+/* =========================
+   INFORMATION BOX
+========================= */
+
+.info-box {
+
+    margin-top: 55px;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e5f7f3,
+            #f3fbf9
+        );
+
+    border:
+        1px solid
+        #d8eeea;
+}
+
+.info-box h3 {
+
+    color: #075f53;
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+.info-box p {
+
+    color: #5f736f;
+
+    max-width: 750px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #063f37;
+
+    color: white;
+
+    padding:
+        45px 20px 25px;
+}
+
+.footer-grid {
+
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-brand h2 {
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+
+    color:
+        rgba(255,255,255,0.65);
+
+    font-size: 13px;
+
+    max-width: 400px;
+}
+
+.footer-column h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+
+    display: block;
+
+    color:
+        rgba(255,255,255,0.65);
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+    transition: 0.2s;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.copyright {
+
+    max-width: 1100px;
+    margin: 35px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    color:
+        rgba(255,255,255,0.45);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .service-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        padding:
+            12px 16px;
+    }
+
+    .brand-text span {
+        display: none;
+    }
+
+    .hero {
+        padding:
+            65px 20px;
+    }
+
+    .hero h2 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .services-section {
+        padding:
+            65px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+<div class="nav-container">
+
+
+<a href="index.html" class="brand">
+
+<div class="brand-icon">
+K3
+</div>
+
+<div class="brand-text">
+
+<h1>
+SDN KALIBARU 3
+</h1>
+
+<span>
+Depok, Jawa Barat
+</span>
+
+</div>
+
+</a>
+
+
+<nav class="nav-menu">
+
+<a href="index.html">
+Beranda
+</a>
+
+<a href="profil.html">
+Profil
+</a>
+
+<a href="layanan.html" class="active">
+Layanan
+</a>
+
+<a href="informasi.html">
+Informasi
+</a>
+
+<a href="kontak.html">
+Kontak
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div class="hero-content">
+
+
+<div class="hero-badge">
+💻 Layanan Digital Sekolah
+</div>
+
+
+<h2>
+
+Semua layanan
+
+<span>
+dalam satu tempat.
+</span>
+
+</h2>
+
+
+<p>
+
+Akses berbagai layanan digital
+SDN Kalibaru 3 Depok dengan
+mudah dan cepat.
+
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<main>
+
+<section class="services-section">
+
+<div class="section-container">
+
+
+<div class="section-heading">
+
+<div class="section-label">
+LAYANAN DIGITAL
+</div>
+
+<h2>
+Layanan Sekolah
+</h2>
+
+<p>
+Gunakan berbagai layanan digital
+yang disediakan SDN Kalibaru 3
+untuk mendukung kegiatan belajar,
+kebiasaan baik, informasi,
+dan komunikasi sekolah.
+</p>
+
+</div>
+
+
+
+<div class="service-grid">
+
+
+<!-- =========================
+     JURNAL
+========================= -->
+
+<a
+href="jurnal.html"
+class="service-card active-service"
+>
+
+<div class="service-icon">
+📝
+</div>
+
+<h3>
+Jurnal 7 KAIH
+</h3>
+
+<p>
+Isi Jurnal 7 Kebiasaan
+Anak Indonesia Hebat
+secara digital.
+</p>
+
+<span class="service-link">
+Buka Jurnal →
+</span>
+
+</a>
+
+
+
+<!-- =========================
+     REKAP
+========================= -->
+
+<a
+href="https://s.id/livejurnal7kaihkb3"
+target="_blank"
+rel="noopener noreferrer"
+class="service-card active-service"
+>
+
+<div class="service-icon">
+📊
+</div>
+
+<h3>
+Rekap Jurnal 7 KAIH
+</h3>
+
+<p>
+Pantau perkembangan
+pelaksanaan 7 Kebiasaan
+Anak Indonesia Hebat.
+</p>
+
+<span class="service-link">
+Lihat Rekap →
+</span>
+
+</a>
+
+
+
+<!-- =========================
+     PEMBELAJARAN
+========================= -->
+
+<div class="service-card coming-soon">
+
+<div class="service-icon">
+📚
+</div>
+
+<h3>
+Pembelajaran
+</h3>
+
+<p>
+Materi, sumber belajar,
+LKPD, dan berbagai
+sumber pembelajaran digital.
+</p>
+
+<span class="coming-label">
+SEGERA HADIR
+</span>
+
+</div>
+
+
+
+<!-- =========================
+     PENGUMUMAN
+========================= -->
+
+<a
+href="informasi.html"
+class="service-card"
+>
+
+<div class="service-icon">
+📢
+</div>
+
+<h3>
+Pengumuman
+</h3>
+
+<p>
+Informasi dan pengumuman
+terbaru dari SDN Kalibaru 3.
+</p>
+
+<span class="service-link">
+Lihat Informasi →
+</span>
+
+</a>
+
+
+
+<!-- =========================
+     AGENDA
+========================= -->
+
+<a
+href="informasi.html"
+class="service-card"
+>
+
+<div class="service-icon">
+📅
+</div>
+
+<h3>
+Agenda Sekolah
+</h3>
+
+<p>
+Jadwal kegiatan dan agenda
+penting sekolah.
+</p>
+
+<span class="service-link">
+Lihat Agenda →
+</span>
+
+</a>
+
+
+
+<!-- =========================
+     DOKUMEN
+========================= -->
+
+<div class="service-card coming-soon">
+
+<div class="service-icon">
+📄
+</div>
+
+<h3>
+Dokumen Sekolah
+</h3>
+
+<p>
+Berbagai dokumen dan
+berkas informasi sekolah
+untuk warga sekolah.
+</p>
+
+<span class="coming-label">
+SEGERA HADIR
+</span>
+
+</div>
+
+
+
+<!-- =========================
+     GALERI
+========================= -->
+
+<div class="service-card coming-soon">
+
+<div class="service-icon">
+📸
+</div>
+
+<h3>
+Galeri Kegiatan
+</h3>
+
+<p>
+Dokumentasi berbagai
+kegiatan dan aktivitas
+SDN Kalibaru 3.
+</p>
+
+<span class="coming-label">
+SEGERA HADIR
+</span>
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- =========================
+     INFO BOX
+========================= -->
+
+<div class="info-box">
+
+<h3>
+🌱 Menuju Sekolah Digital
+</h3>
+
+<p>
+Website SDN Kalibaru 3 terus
+dikembangkan secara bertahap.
+Layanan yang sudah siap dapat
+langsung digunakan, sementara
+layanan lainnya akan ditambahkan
+sesuai kebutuhan sekolah.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div class="footer-brand">
+
+<h2>
+SDN KALIBARU 3 DEPOK
+</h2>
+
+<p>
+Portal resmi SDN Kalibaru 3 Depok.
+Menjadi ruang informasi,
+komunikasi, dan layanan digital
+sekolah.
+</p>
+
+</div>
+
+
+
+<div class="footer-column">
+
+<h3>
+Navigasi
+</h3>
+
+<a href="index.html">
+Beranda
+</a>
+
+<a href="profil.html">
+Profil
+</a>
+
+<a href="layanan.html">
+Layanan
+</a>
+
+<a href="informasi.html">
+Informasi
+</a>
+
+<a href="kontak.html">
+Kontak
+</a>
+
+</div>
+
+
+
+<div class="footer-column">
+
+<h3>
+Layanan
+</h3>
+
+<a href="jurnal.html">
+Jurnal 7 KAIH
+</a>
+
+<a
+href="https://s.id/livejurnal7kaihkb3"
+target="_blank"
+rel="noopener noreferrer">
+
+Rekap Jurnal
+
+</a>
+
+<a href="informasi.html">
+Pengumuman
+</a>
+
+<a href="informasi.html">
+Agenda
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="copyright">
+
+© 2026 SDN Kalibaru 3 Depok.
+Seluruh hak cipta dilindungi.
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
