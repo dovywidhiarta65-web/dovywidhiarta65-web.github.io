@@ -70,22 +70,25 @@
             gap: 12px;
         }
 
-        .brand-icon {
-            width: 45px;
-            height: 45px;
+        .brand-logo {
+    width: 45px;
+    height: 45px;
 
-            background: #087f6e;
-            color: white;
+    flex-shrink: 0;
 
-            border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+.brand-logo img {
+    width: 100%;
+    height: 100%;
 
-            font-size: 22px;
-            font-weight: bold;
-        }
+    object-fit: contain;
+
+    display: block;
+}
 
         .brand-text h1 {
             font-size: 17px;
@@ -852,9 +855,9 @@
 
             <a href="#beranda" class="brand">
 
-                <div class="brand-icon">
-                    K3
-                </div>
+                <div class="brand-logo">
+    <img src="LOGO%20KB3.png" alt="Logo SDN Kalibaru 3">
+</div>
 
                 <div class="brand-text">
                     <h1>SDN KALIBARU 3</h1>
