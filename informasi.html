@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Informasi Sekolah | SDN Kalibaru 3 Depok</title>
+<title>Informasi | SDN Kalibaru 3 Depok</title>
 
 <style>
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f7f9f9;
-    color: #173b39;
+    background: #f5f8f7;
+    color: #173b38;
     line-height: 1.6;
 }
 
@@ -25,132 +25,121 @@ a {
     color: inherit;
 }
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 header {
-    height: 72px;
     background: #ffffff;
+    border-bottom: 1px solid #e5ecea;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1180px;
+    margin: auto;
+    height: 68px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 7%;
-    border-bottom: 1px solid #eeeeee;
+    padding: 0 24px;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 12px;
 }
 
 .logo {
     width: 46px;
     height: 46px;
-    background: #12877b;
+    border-radius: 14px;
+    background: #0c8478;
     color: white;
-    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 23px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 800;
 }
 
-.brand-text h1 {
+.brand-text strong {
+    display: block;
+    color: #08766d;
     font-size: 17px;
-    color: #075f58;
-    margin-bottom: -2px;
 }
 
-.brand-text p {
+.brand-text span {
+    display: block;
+    color: #72817f;
     font-size: 12px;
-    color: #71807f;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
 }
 
 nav a {
+    color: #405654;
     font-size: 14px;
-    color: #3d4e4d;
-    transition: 0.25s;
+    transition: 0.2s;
 }
 
 nav a:hover {
-    color: #07877b;
+    color: #087f75;
 }
 
-nav .active {
-    background: #12877b;
+nav a.active {
+    background: #0c8478;
     color: white;
     padding: 11px 17px;
-    border-radius: 11px;
+    border-radius: 12px;
 }
 
-/* ================= HERO ================= */
-
+/* HERO */
 .hero {
-    position: relative;
-    min-height: 330px;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(4, 63, 60, 0.92),
-            rgba(4, 63, 60, 0.65),
-            rgba(4, 63, 60, 0.25)
-        ),
-        url("sekolah.jpeg") center/cover no-repeat;
-
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    width: 1100px;
-    max-width: 86%;
-    margin: auto;
+    background: linear-gradient(135deg, #075e57, #0d887d);
     color: white;
+    padding: 78px 24px;
 }
 
-.badge {
+.hero-inner {
+    max-width: 1180px;
+    margin: auto;
+}
+
+.hero small {
     display: inline-block;
-    border: 1px solid rgba(255,255,255,0.45);
-    padding: 7px 15px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 7px 14px;
     border-radius: 30px;
-    font-size: 13px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
-.hero h2 {
-    font-size: 48px;
-    line-height: 1.1;
-    max-width: 650px;
-    margin-bottom: 15px;
-}
-
-.hero h2 span {
-    color: #64e1d1;
+.hero h1 {
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+    margin-bottom: 20px;
 }
 
 .hero p {
     max-width: 650px;
-    font-size: 17px;
-    color: #f1f8f7;
+    font-size: 18px;
+    color: #e4f7f4;
 }
 
-/* ================= CONTENT ================= */
-
+/* CONTENT */
 .container {
-    max-width: 1100px;
+    max-width: 1180px;
     margin: auto;
-    padding: 70px 25px;
+    padding: 70px 24px;
 }
 
 .section-label {
-    color: #07877b;
+    color: #0c8478;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -160,173 +149,146 @@ nav .active {
 
 .section-title {
     font-size: 34px;
-    color: #123d3a;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .section-desc {
-    color: #687675;
+    color: #6b7b79;
     max-width: 700px;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
 }
 
-/* ================= CARDS ================= */
-
-.cards {
+/* CARDS */
+.info-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 22px;
 }
 
 .card {
     background: white;
-    border: 1px solid #e6eeee;
-    border-radius: 18px;
-    padding: 28px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    border: 1px solid #e4ecea;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(18, 67, 61, 0.06);
     transition: 0.25s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(18, 67, 61, 0.11);
 }
 
 .icon {
-    width: 55px;
-    height: 55px;
+    width: 52px;
+    height: 52px;
     border-radius: 15px;
-    background: #e2f6f2;
+    background: #e3f5f2;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 27px;
+    font-size: 25px;
     margin-bottom: 20px;
 }
 
-.card h3 {
-    font-size: 20px;
-    color: #075f58;
-    margin-bottom: 8px;
+.card h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
 }
 
 .card p {
-    color: #71807f;
-    font-size: 14px;
+    color: #687875;
     margin-bottom: 20px;
 }
 
 .card-button {
     display: inline-block;
-    color: #07877b;
+    background: #0c8478;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
     font-size: 14px;
     font-weight: bold;
 }
 
 .card-button:hover {
-    color: #044f4a;
+    background: #096d64;
 }
 
-/* ================= INFO BANNER ================= */
-
-.info-banner {
-    margin-top: 55px;
-    background: linear-gradient(135deg, #e2f7f3, #f2fbfa);
-    border-radius: 22px;
-    padding: 35px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+/* FEATURE */
+.feature {
+    margin-top: 60px;
+    background: #e8f7f4;
+    border-radius: 24px;
+    padding: 38px;
 }
 
-.info-banner h3 {
+.feature h2 {
     font-size: 25px;
-    color: #075f58;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
-.info-banner p {
-    color: #61706f;
-    font-size: 14px;
+.feature p {
+    color: #58706c;
 }
 
-.info-button {
-    background: #12877b;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-/* ================= FOOTER ================= */
-
+/* FOOTER */
 footer {
-    background: #043f3c;
-    color: white;
+    background: #063f3a;
+    color: #d9efec;
     margin-top: 30px;
-    padding: 55px 7% 25px;
 }
 
-.footer-grid {
-    max-width: 1100px;
+.footer-inner {
+    max-width: 1180px;
     margin: auto;
+    padding: 55px 24px 25px;
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
     gap: 50px;
 }
 
-.footer-brand h3 {
-    font-size: 21px;
-    margin-bottom: 12px;
-}
-
-.footer-brand p {
-    color: #b8d0ce;
-    font-size: 14px;
-    max-width: 350px;
-}
-
-.footer-column h4 {
+footer h3 {
+    color: white;
     margin-bottom: 15px;
 }
 
-.footer-column a {
-    display: block;
-    color: #b8d0ce;
+footer p,
+footer a {
+    color: #b9d7d3;
     font-size: 14px;
-    margin-bottom: 8px;
 }
 
-.footer-column a:hover {
-    color: white;
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
-.copyright {
-    max-width: 1100px;
-    margin: 40px auto 0;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    color: #9eb9b7;
-    font-size: 12px;
+.footer-bottom {
+    max-width: 1180px;
+    margin: auto;
+    padding: 18px 24px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 13px;
+    color: #9fc3be;
 }
 
-/* ================= RESPONSIVE ================= */
+/* MOBILE */
+@media (max-width: 760px) {
 
-@media (max-width: 800px) {
-
-    header {
+    .navbar {
         height: auto;
-        padding: 15px 5%;
-        gap: 15px;
+        padding: 14px 18px;
         flex-direction: column;
+        gap: 14px;
     }
 
     nav {
-        gap: 15px;
-        flex-wrap: wrap;
+        width: 100%;
         justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
     }
 
     nav a {
@@ -334,44 +296,20 @@ footer {
     }
 
     .hero {
-        min-height: 400px;
+        padding: 55px 20px;
     }
 
-    .hero h2 {
-        font-size: 38px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 550px) {
-
-    .hero h2 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .cards {
+    .info-grid {
         grid-template-columns: 1fr;
     }
 
-    .info-banner {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 28px;
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
+    .container {
+        padding: 50px 20px;
     }
 }
 </style>
@@ -379,49 +317,46 @@ footer {
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
+<!-- HEADER -->
 <header>
+    <div class="navbar">
 
-    <a href="index.html" class="brand">
+        <a href="index.html" class="brand">
+            <div class="logo">K3</div>
 
-        <div class="logo">K3</div>
+            <div class="brand-text">
+                <strong>SDN KALIBARU 3</strong>
+                <span>Depok, Jawa Barat</span>
+            </div>
+        </a>
 
-        <div class="brand-text">
-            <h1>SDN KALIBARU 3</h1>
-            <p>Depok, Jawa Barat</p>
-        </div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="layanan.html">Layanan</a>
+            <a href="informasi.html" class="active">Informasi</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
 
-    </a>
-
-    <nav>
-        <a href="index.html">Beranda</a>
-        <a href="profil.html">Profil</a>
-        <a href="layanan.html">Layanan</a>
-        <a href="informasi.html" class="active">Informasi</a>
-        <a href="kontak.html">Kontak</a>
-    </nav>
-
+    </div>
 </header>
 
 
-<!-- ================= HERO ================= -->
-
+<!-- HERO -->
 <section class="hero">
 
-    <div class="hero-content">
+    <div class="hero-inner">
 
-        <div class="badge">📢 Portal Informasi Sekolah</div>
+        <small>📢 Pusat Informasi Sekolah</small>
 
-        <h2>
-            Informasi Terbaru
-            <span>SDN Kalibaru 3</span>
-        </h2>
+        <h1>
+            Informasi<br>
+            SDN Kalibaru 3
+        </h1>
 
         <p>
-            Temukan berbagai informasi, berita, agenda,
-            pengumuman, dan perkembangan terbaru
-            SDN Kalibaru 3 Depok.
+            Temukan informasi, pengumuman, agenda kegiatan,
+            berita, serta berbagai dokumen penting SDN Kalibaru 3 Depok.
         </p>
 
     </div>
@@ -429,8 +364,7 @@ footer {
 </section>
 
 
-<!-- ================= CONTENT ================= -->
-
+<!-- CONTENT -->
 <main class="container">
 
     <div class="section-label">
@@ -438,29 +372,27 @@ footer {
     </div>
 
     <h2 class="section-title">
-        Temukan Informasi yang Anda Butuhkan
+        Informasi Terbaru
     </h2>
 
     <p class="section-desc">
-        Berbagai informasi sekolah disajikan untuk membantu
-        siswa, orang tua, guru, dan seluruh warga sekolah
-        mendapatkan informasi secara mudah dan cepat.
+        Halaman ini menjadi pusat informasi digital SDN Kalibaru 3 Depok
+        untuk siswa, orang tua, guru, dan masyarakat.
     </p>
 
 
-    <section class="cards">
+    <div class="info-grid">
 
-        <!-- Pengumuman -->
-
+        <!-- PENGUMUMAN -->
         <article class="card">
 
             <div class="icon">📢</div>
 
-            <h3>Pengumuman</h3>
+            <h2>Pengumuman Sekolah</h2>
 
             <p>
-                Informasi dan pengumuman penting
-                dari sekolah untuk seluruh warga sekolah.
+                Informasi dan pemberitahuan resmi mengenai kegiatan
+                serta berbagai hal penting di lingkungan sekolah.
             </p>
 
             <a href="#" class="card-button">
@@ -470,17 +402,16 @@ footer {
         </article>
 
 
-        <!-- Agenda -->
-
+        <!-- AGENDA -->
         <article class="card">
 
             <div class="icon">📅</div>
 
-            <h3>Agenda Sekolah</h3>
+            <h2>Agenda & Kegiatan</h2>
 
             <p>
-                Informasi mengenai kegiatan dan agenda
-                sekolah yang akan maupun telah dilaksanakan.
+                Jadwal kegiatan sekolah, kegiatan pembelajaran,
+                peringatan hari besar, dan agenda lainnya.
             </p>
 
             <a href="#" class="card-button">
@@ -490,17 +421,16 @@ footer {
         </article>
 
 
-        <!-- Berita -->
-
+        <!-- BERITA -->
         <article class="card">
 
             <div class="icon">📰</div>
 
-            <h3>Berita Sekolah</h3>
+            <h2>Berita Sekolah</h2>
 
             <p>
-                Berita dan dokumentasi berbagai kegiatan
-                SDN Kalibaru 3 Depok.
+                Kabar terbaru mengenai kegiatan, prestasi,
+                dan berbagai aktivitas SDN Kalibaru 3 Depok.
             </p>
 
             <a href="#" class="card-button">
@@ -510,57 +440,16 @@ footer {
         </article>
 
 
-        <!-- Prestasi -->
-
-        <article class="card">
-
-            <div class="icon">🏆</div>
-
-            <h3>Prestasi Siswa</h3>
-
-            <p>
-                Informasi mengenai prestasi dan pencapaian
-                siswa SDN Kalibaru 3.
-            </p>
-
-            <a href="#" class="card-button">
-                Lihat Prestasi →
-            </a>
-
-        </article>
-
-
-        <!-- Akademik -->
-
-        <article class="card">
-
-            <div class="icon">📚</div>
-
-            <h3>Informasi Akademik</h3>
-
-            <p>
-                Informasi pembelajaran, kegiatan akademik,
-                dan berbagai informasi pendidikan sekolah.
-            </p>
-
-            <a href="#" class="card-button">
-                Lihat Akademik →
-            </a>
-
-        </article>
-
-
-        <!-- Dokumen -->
-
+        <!-- DOKUMEN -->
         <article class="card">
 
             <div class="icon">📄</div>
 
-            <h3>Dokumen Sekolah</h3>
+            <h2>Dokumen & Unduhan</h2>
 
             <p>
-                Akses dokumen dan berbagai berkas
-                yang disediakan oleh sekolah.
+                Kumpulan dokumen dan berkas yang dapat diakses
+                oleh warga sekolah sesuai kebutuhan.
             </p>
 
             <a href="#" class="card-button">
@@ -569,43 +458,31 @@ footer {
 
         </article>
 
-    </section>
+    </div>
 
 
-    <!-- BANNER -->
+    <!-- FEATURE -->
+    <section class="feature">
 
-    <section class="info-banner">
+        <h2>🌱 Portal Informasi SDN Kalibaru 3</h2>
 
-        <div>
-
-            <h3>
-                Selalu ikuti informasi terbaru sekolah
-            </h3>
-
-            <p>
-                Website SDN Kalibaru 3 akan terus dikembangkan
-                sebagai pusat informasi digital sekolah.
-            </p>
-
-        </div>
-
-        <a href="index.html" class="info-button">
-            Kembali ke Beranda
-        </a>
+        <p>
+            Website ini dikembangkan sebagai sarana informasi dan layanan
+            digital sekolah yang mudah diakses oleh seluruh warga sekolah
+            dan masyarakat.
+        </p>
 
     </section>
 
 </main>
 
 
-<!-- ================= FOOTER ================= -->
-
+<!-- FOOTER -->
 <footer>
 
-    <div class="footer-grid">
+    <div class="footer-inner">
 
-        <div class="footer-brand">
-
+        <div>
             <h3>SDN KALIBARU 3 DEPOK</h3>
 
             <p>
@@ -613,41 +490,38 @@ footer {
                 Menjadi ruang informasi, komunikasi,
                 dan layanan digital sekolah.
             </p>
-
         </div>
 
 
-        <div class="footer-column">
+        <div>
+            <h3>Navigasi</h3>
 
-            <h4>Navigasi</h4>
-
-            <a href="index.html">Beranda</a>
-            <a href="profil.html">Profil</a>
-            <a href="layanan.html">Layanan</a>
-            <a href="informasi.html">Informasi</a>
-            <a href="kontak.html">Kontak</a>
-
+            <div class="footer-links">
+                <a href="index.html">Beranda</a>
+                <a href="profil.html">Profil</a>
+                <a href="layanan.html">Layanan</a>
+                <a href="informasi.html">Informasi</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
         </div>
 
 
-        <div class="footer-column">
+        <div>
+            <h3>Layanan</h3>
 
-            <h4>Layanan</h4>
-
-            <a href="jurnal.html">Jurnal 7 KAIH</a>
-            <a href="layanan.html">Pembelajaran</a>
-            <a href="layanan.html">Dokumen</a>
-            <a href="layanan.html">Galeri</a>
-
+            <div class="footer-links">
+                <a href="jurnal.html">Jurnal 7 KAIH</a>
+                <a href="#">Pembelajaran</a>
+                <a href="#">Dokumen</a>
+                <a href="#">Galeri</a>
+            </div>
         </div>
 
     </div>
 
 
-    <div class="copyright">
-
+    <div class="footer-bottom">
         © 2026 SDN Kalibaru 3 Depok. Semua hak dilindungi.
-
     </div>
 
 </footer>
