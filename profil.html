@@ -75,21 +75,24 @@ a {
     gap: 12px;
 }
 
-.brand-icon {
+.brand-logo {
     width: 45px;
     height: 45px;
 
-    background: #087f6e;
-    color: white;
-
-    border-radius: 12px;
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
-    font-size: 22px;
-    font-weight: bold;
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
 }
 
 .brand-text h1 {
@@ -552,6 +555,25 @@ footer {
     gap: 50px;
 }
 
+.footer-logo {
+    width: 70px;
+    height: 70px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+   
 .footer-brand h2 {
 
     font-size: 20px;
@@ -724,8 +746,8 @@ footer {
 
 <a href="index.html" class="brand">
 
-<div class="brand-icon">
-K3
+<div class="brand-logo">
+    <img src="LOGO%20KB3.png" alt="Logo SDN Kalibaru 3">
 </div>
 
 <div class="brand-text">
@@ -1067,9 +1089,13 @@ tumbuh kembang anak.
 
 <div class="footer-brand">
 
-<h2>
-SDN KALIBARU 3 DEPOK
-</h2>
+    <div class="footer-logo">
+        <img src="LOGO%20KB3.png" alt="Logo SDN Kalibaru 3">
+    </div>
+
+    <h2>
+        SDN KALIBARU 3 DEPOK
+    </h2>
 
 <p>
 Portal resmi SDN Kalibaru 3 Depok.
